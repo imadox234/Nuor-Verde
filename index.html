@@ -1,15 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta>
-    <link src="global.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Quote | Nuor Verde</title>
+    <meta name="description"
+        content="Request a bulk pricing quote for export-ready Moroccan produce and culinary herbs">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <nav>
+    <header>
+        <nav aria-label="Main Navigation">
+            <a href="index.html" class="logo">Nuor Verde</a>
+            <a href="catalog.html">Back to Catalog</a>
+        </nav>
+    </header>
 
-    </nav>
+    <main>
+        <section class="quote-section">
+            <h1>Request a Bulk Quote</h1>
+            <p>Fill out the details below and our logistics team will respond within 24 hours.</p>
+
+            <!-- The Form -->
+            <form action="#" method="POST" class="b2b-form">
+                <!-- Company Details-->
+                <fieldset>
+                    <legend>1. Company Information</legend>
+                    <div class="form-group">
+                        <label for="companyName">Company Name *</label>
+                        <input type="text" id="companyName" name="companyName" required
+                            placeholder="e.g., Global Food Ltd.">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="businessEmail">Business Email *</label>
+                        <input type="email" id="businessEmail" name="businessEmail" required
+                            placeholder="procurement@company.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone / WhatsApp</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+212 ...">
+                    </div>
+                </fieldset>
+
+                <!-- Order Deatails -->
+                <fieldset>
+                    <legend>2. Order Specifications</legend>
+
+                    <div class="form-group">
+                        <label for="productInterest">Primary Product Interest *</label>
+                        <select id="productInterest" name="productInterest" required>
+                            <option value="" disabled selected>Select a category..</option>
+                            <option value="tomatoes">Greenhouse Tomatoes</option>
+                            <option value="citrus">Citrus (Oranges / Lemons)</option>
+                            <option value="herbs">Fresh Culinary Herbs</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="volume">Estimated Monthly Volume (in Metric Tons)</label>
+                        <input type="number" id="volume" name="volume" min="1" step="0.5" required
+                            placeholder="e.g., 5">
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="submit-btn">Request Quote</button>
+            </form>
+        </section>
+    </main>
 
 </body>
 
